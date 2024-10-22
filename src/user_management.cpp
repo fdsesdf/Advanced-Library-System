@@ -1,4 +1,5 @@
-#include "UserManagement.h"
+#include "user_management.h"
+#include <string>
 
 User::User(const std::string& username, const std::string& passwordHash)
     : username(username), passwordHash(passwordHash) {}

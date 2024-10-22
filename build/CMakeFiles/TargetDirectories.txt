@@ -1,0 +1,3 @@
+/home/lx/桌面/Advanced-Library-System/build/CMakeFiles/Advanced-Library-System.dir
+/home/lx/桌面/Advanced-Library-System/build/CMakeFiles/edit_cache.dir
+/home/lx/桌面/Advanced-Library-System/build/CMakeFiles/rebuild_cache.dir
