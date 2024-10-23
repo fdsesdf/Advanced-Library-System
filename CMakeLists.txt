@@ -16,11 +16,12 @@ find_library(MYSQL_LIBRARIES NAMES mysqlclient HINTS ${MYSQL_LIBRARY_DIR})
 find_package(Boost REQUIRED)
 find_package(Threads REQUIRED)
 find_package(OpenSSL REQUIRED)
-
+find_package(nlohmann_json 3.2.0 REQUIRED)
 # 包含头文件
 include_directories(include)
 include_directories(${MYSQL_INCLUDE_DIR})
 include_directories(${OPENSSL_INCLUDE_DIR})
+include_directories("/usr/include/nlohmann")
 
 # 添加链接库目录
 link_directories(${MYSQL_LIBRARY_DIR})
@@ -34,9 +35,12 @@ add_executable(Advanced-Library-System
     src/logger.cpp
     src/DBClient.cpp
     src/usercontroller.cpp
+    src/Book.cpp
+    src/User.cpp
 )
 
 # 链接必要的库
+target_link_libraries(Advanced-Library-System nlohmann_json::nlohmann_json)
 target_link_libraries(Advanced-Library-System Qt5::Widgets ${Boost_LIBRARIES} mysqlclient pthread)
 target_link_libraries(Advanced-Library-System hiredis)
 target_link_libraries(Advanced-Library-System ${OPENSSL_LIBRARIES})

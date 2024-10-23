@@ -7,11 +7,13 @@
 #include <sstream>
 #include "usercontroller.h" // 包含 UserController 的头文件
 #include "bookcontroller.h"
+
 UserController::UserController() {
     connectToRedis();
 }
+
 // 哈希密码
-std::string hashPassword(const std::string& password) {
+std::string UserController::hashPassword(const std::string& password) {
     EVP_MD_CTX* ctx = EVP_MD_CTX_new();
     unsigned char hash[SHA256_DIGEST_LENGTH];
 
@@ -28,14 +30,14 @@ std::string hashPassword(const std::string& password) {
 }
 
 // 注册用户
-bool UserController::registerUser(const std::string& username, const std::string& password) {
+bool UserController::registerUser(const std::string& username, const std::string& password, const std::string& role) {
     if (users.find(username) != users.end()) {
         std::cout << "User already exists!" << std::endl;
         return false;
     }
 
     std::string passwordHash = hashPassword(password);
-    users[username] = User(username, passwordHash);
+    users[username] = User(username, passwordHash, role); // 添加角色信息
     std::cout << "User registered successfully!" << std::endl;
     return true;
 }
@@ -96,7 +98,7 @@ User UserController::getSession(const std::string& sessionId) {
     redisContext *context = redisConnect("127.0.0.1", 6379);
     if (context == NULL || context->err) {
         std::cout << "Redis connection failed!" << std::endl;
-        return User("", "");
+        return User("", ""); // 返回一个空的 User 对象
     }
 
     redisReply *reply = (redisReply *)redisCommand(context, ("GET " + sessionId).c_str());
@@ -109,9 +111,10 @@ User UserController::getSession(const std::string& sessionId) {
 
     freeReplyObject(reply);
     redisFree(context);
-    return User("", "");
+    return User("", ""); // 返回一个空的 User 对象
 }
-//带权限检查的addBook方法
+
+// 带权限检查的 addBook 方法
 bool BookController::addBook(const Book& book) {
     if (currentUser.getRole() != "admin") {
         throw std::runtime_error("权限不足：只有管理员可以添加图书");

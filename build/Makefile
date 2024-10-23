@@ -129,6 +129,30 @@ Advanced-Library-System/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/build
 .PHONY : Advanced-Library-System/fast
 
+src/Book.o: src/Book.cpp.o
+.PHONY : src/Book.o
+
+# target to build an object file
+src/Book.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o
+.PHONY : src/Book.cpp.o
+
+src/Book.i: src/Book.cpp.i
+.PHONY : src/Book.i
+
+# target to preprocess a source file
+src/Book.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.i
+.PHONY : src/Book.cpp.i
+
+src/Book.s: src/Book.cpp.s
+.PHONY : src/Book.s
+
+# target to generate assembly for a file
+src/Book.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.s
+.PHONY : src/Book.cpp.s
+
 src/DBClient.o: src/DBClient.cpp.o
 .PHONY : src/DBClient.o
 
@@ -152,6 +176,30 @@ src/DBClient.s: src/DBClient.cpp.s
 src/DBClient.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/DBClient.cpp.s
 .PHONY : src/DBClient.cpp.s
+
+src/User.o: src/User.cpp.o
+.PHONY : src/User.o
+
+# target to build an object file
+src/User.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o
+.PHONY : src/User.cpp.o
+
+src/User.i: src/User.cpp.i
+.PHONY : src/User.i
+
+# target to preprocess a source file
+src/User.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/User.cpp.i
+.PHONY : src/User.cpp.i
+
+src/User.s: src/User.cpp.s
+.PHONY : src/User.s
+
+# target to generate assembly for a file
+src/User.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/User.cpp.s
+.PHONY : src/User.cpp.s
 
 src/book_management.o: src/book_management.cpp.o
 .PHONY : src/book_management.o
@@ -306,9 +354,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Advanced-Library-System"
+	@echo "... src/Book.o"
+	@echo "... src/Book.i"
+	@echo "... src/Book.s"
 	@echo "... src/DBClient.o"
 	@echo "... src/DBClient.i"
 	@echo "... src/DBClient.s"
+	@echo "... src/User.o"
+	@echo "... src/User.i"
+	@echo "... src/User.s"
 	@echo "... src/book_management.o"
 	@echo "... src/book_management.i"
 	@echo "... src/book_management.s"

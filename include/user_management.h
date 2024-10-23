@@ -1,20 +1,24 @@
-// user_management.h
 #ifndef USER_MANAGEMENT_H
 #define USER_MANAGEMENT_H
 
-#include <string> // 确保包含了 string 头文件
+#include <string>
+#include <vector>
+#include "user.h"
 
-class User {
+class UserManagement {
 public:
-    User(const std::string& username, const std::string& passwordHash);
+    // 添加用户
+    bool registerUser(const std::string& username, const std::string& passwordHash, const std::string& role);
     
-    std::string getUsername() const;
-    std::string getPasswordHash() const;
-    void setPasswordHash(const std::string& newPasswordHash);
+    // 登录用户
+    bool login(const std::string& username, const std::string& passwordHash);
+    
+    // 获取所有用户
+    std::vector<User> getAllUsers() const;
 
 private:
-    std::string username;     // 用户名
-    std::string passwordHash; // 密码哈希
+    std::vector<User> users; // 存储用户列表
+    std::string hashPassword(const std::string& password);
 };
 
 #endif // USER_MANAGEMENT_H

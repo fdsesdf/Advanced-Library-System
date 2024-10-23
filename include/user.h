@@ -10,7 +10,7 @@ public:
     User() = default;
     std::string getUsername() const;
     std::string getPasswordHash() const;
-    std::string getRole() const { return role; }
+    std::string getRole() const ;
 private:
     std::string username;
     std::string passwordHash;

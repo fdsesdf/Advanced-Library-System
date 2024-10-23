@@ -1,34 +1,35 @@
-#ifndef USER_CONTROLLER_H
-#define USER_CONTROLLER_H
+#ifndef USERCONTROLLER_H
+#define USERCONTROLLER_H
 
-#include <string>
 #include <unordered_map>
-#include "user.h"
-#include "DBClient.h"
+#include <string>
+#include "user.h" // 确保包含 User 类的头文件
 
 class UserController {
 public:
     UserController();
 
     // 注册用户
-    bool registerUser(const std::string& username, const std::string& password);
+    bool registerUser(const std::string& username, const std::string& password, const std::string& role);
 
-    // 用户登录
+    // 登录用户
     bool loginUser(const std::string& username, const std::string& password);
 
-    // 使用 Redis 存储用户会话
+    // 存储会话
     void storeSession(const std::string& sessionId, const User& user);
 
-    // 获取 Redis 中的用户会话
+    // 获取会话
     User getSession(const std::string& sessionId);
-    
-    bool addBook(const Book& book);
-    
-    User currentUser;  // 登录后当前用户信息
-    DBClient dbClient;
+
 private:
-    std::unordered_map<std::string, User> users; // 模拟数据库存储用户信息
-    void connectToRedis(); // 连接 Redis
+    // 用户信息存储
+    std::unordered_map<std::string, User> users;
+
+    // 连接到 Redis
+    void connectToRedis();
+
+    // 哈希密码
+    std::string hashPassword(const std::string& password);
 };
 
-#endif // USER_CONTROLLER_H
+#endif // USERCONTROLLER_H

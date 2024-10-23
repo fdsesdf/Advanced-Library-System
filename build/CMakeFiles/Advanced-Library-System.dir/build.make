@@ -167,6 +167,34 @@ CMakeFiles/Advanced-Library-System.dir/src/usercontroller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Advanced-Library-System.dir/src/usercontroller.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lx/桌面/Advanced-Library-System/src/usercontroller.cpp -o CMakeFiles/Advanced-Library-System.dir/src/usercontroller.cpp.s
 
+CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o: CMakeFiles/Advanced-Library-System.dir/flags.make
+CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o: /home/lx/桌面/Advanced-Library-System/src/Book.cpp
+CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o: CMakeFiles/Advanced-Library-System.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lx/桌面/Advanced-Library-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o -MF CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o.d -o CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o -c /home/lx/桌面/Advanced-Library-System/src/Book.cpp
+
+CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lx/桌面/Advanced-Library-System/src/Book.cpp > CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.i
+
+CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lx/桌面/Advanced-Library-System/src/Book.cpp -o CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.s
+
+CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o: CMakeFiles/Advanced-Library-System.dir/flags.make
+CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o: /home/lx/桌面/Advanced-Library-System/src/User.cpp
+CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o: CMakeFiles/Advanced-Library-System.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lx/桌面/Advanced-Library-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o -MF CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o.d -o CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o -c /home/lx/桌面/Advanced-Library-System/src/User.cpp
+
+CMakeFiles/Advanced-Library-System.dir/src/User.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Advanced-Library-System.dir/src/User.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lx/桌面/Advanced-Library-System/src/User.cpp > CMakeFiles/Advanced-Library-System.dir/src/User.cpp.i
+
+CMakeFiles/Advanced-Library-System.dir/src/User.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Advanced-Library-System.dir/src/User.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lx/桌面/Advanced-Library-System/src/User.cpp -o CMakeFiles/Advanced-Library-System.dir/src/User.cpp.s
+
 # Object files for target Advanced-Library-System
 Advanced__Library__System_OBJECTS = \
 "CMakeFiles/Advanced-Library-System.dir/src/main.cpp.o" \
@@ -175,7 +203,9 @@ Advanced__Library__System_OBJECTS = \
 "CMakeFiles/Advanced-Library-System.dir/src/database.cpp.o" \
 "CMakeFiles/Advanced-Library-System.dir/src/logger.cpp.o" \
 "CMakeFiles/Advanced-Library-System.dir/src/DBClient.cpp.o" \
-"CMakeFiles/Advanced-Library-System.dir/src/usercontroller.cpp.o"
+"CMakeFiles/Advanced-Library-System.dir/src/usercontroller.cpp.o" \
+"CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o" \
+"CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o"
 
 # External object files for target Advanced-Library-System
 Advanced__Library__System_EXTERNAL_OBJECTS =
@@ -187,6 +217,8 @@ Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/src/database.cpp
 Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/src/logger.cpp.o
 Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/src/DBClient.cpp.o
 Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/src/usercontroller.cpp.o
+Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o
+Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o
 Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/build.make
 Advanced-Library-System: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 Advanced-Library-System: /usr/lib/x86_64-linux-gnu/libssl.so
@@ -194,7 +226,7 @@ Advanced-Library-System: /usr/lib/x86_64-linux-gnu/libcrypto.so
 Advanced-Library-System: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 Advanced-Library-System: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lx/桌面/Advanced-Library-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Advanced-Library-System"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lx/桌面/Advanced-Library-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Advanced-Library-System"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Advanced-Library-System.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

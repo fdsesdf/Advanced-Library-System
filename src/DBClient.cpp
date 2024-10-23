@@ -1,29 +1,117 @@
-#include "DBClient.h"
-#include <stdexcept>
-#include <iostream>
-
-// 构造函数，连接数据库
+#include "DBClient.h"    // 包含 DBClient 类的声明
+#include "Book.h"        // 包含 Book 类的声明
+#include <mysql/mysql.h> // MySQL 相关操作的库
+#include <iostream>      // 用于输出调试信息
+#include <stdexcept>     // 用于异常处理
+#include <sstream>       // 用于字符串操作 (例如拼接 SQL 语句)
 DBClient::DBClient() {
-    // 初始化数据库连接逻辑
-    // 例如，连接到 MySQL 或其他数据库
-    std::cout << "连接数据库成功！" << std::endl;
+    conn = mysql_init(nullptr);
+    if (conn == nullptr) {
+        throw std::runtime_error("MySQL 初始化失败");
+    }
+
+    conn = mysql_real_connect(conn, "localhost", "root", "StrongP@ssw0rd!", "library", 3306, nullptr, 0);
+    if (conn == nullptr) {
+        throw std::runtime_error("MySQL 连接失败");
+    }
 }
 
-// 插入书籍到数据库
 bool DBClient::insertBook(const Book& book) {
-    // 示例逻辑：将图书插入数据库
-    // 实际上你可以在这里编写 SQL 语句或 ORM 调用
-    std::cout << "插入书籍：" << book.title << std::endl;
+    std::stringstream query;
+    query << "INSERT INTO books (title, author, isbn, year_published, copies_available) VALUES ('"
+          << book.title << "', '" << book.author << "', '" << book.isbn << "', "
+          << book.yearPublished << ", " << book.copiesAvailable << ")";
+    
+    if (mysql_query(conn, query.str().c_str())) {
+        std::cerr << "插入书籍失败: " << mysql_error(conn) << std::endl;
+        return false;
+    }
 
-    // 假设插入成功
     return true;
 }
 
-// 查找书籍，示例方法
-Book DBClient::findBookByTitle(const std::string& title) {
-    // 在数据库中查找书籍的逻辑
-    std::cout << "查找书籍：" << title << std::endl;
+bool DBClient::deleteBook(int bookId) {
+    std::stringstream query;
+    query << "DELETE FROM books WHERE id = " << bookId;
 
-    // 假设找到书籍，返回一个 Book 对象
-    return Book(10,title, "作者", "类别", 2024,120);  // 示例
+    if (mysql_query(conn, query.str().c_str())) {
+        std::cerr << "删除书籍失败: " << mysql_error(conn) << std::endl;
+        return false;
+    }
+
+    return true;
+}
+
+bool DBClient::updateBook(int bookId, const Book& updatedBook) {
+    std::stringstream query;
+    query << "UPDATE books SET title = '" << updatedBook.title
+          << "', author = '" << updatedBook.author
+          << "', isbn = '" << updatedBook.isbn
+          << "', year_published = " << updatedBook.yearPublished
+          << ", copies_available = " << updatedBook.copiesAvailable
+          << " WHERE id = " << bookId;
+    
+    if (mysql_query(conn, query.str().c_str())) {
+        std::cerr << "更新书籍失败: " << mysql_error(conn) << std::endl;
+        return false;
+    }
+
+    return true;
+}
+
+Book DBClient::queryBookById(int bookId) {
+    std::stringstream query;
+    query << "SELECT * FROM books WHERE id = " << bookId;
+
+    if (mysql_query(conn, query.str().c_str())) {
+        std::cerr << "查询书籍失败: " << mysql_error(conn) << std::endl;
+        throw std::runtime_error("书籍查询失败");
+    }
+
+    MYSQL_RES *res = mysql_store_result(conn);
+    MYSQL_ROW row = mysql_fetch_row(res);
+
+    Book book;
+    if (row) {
+        book.id = std::stoi(row[0]);
+        book.title = row[1];
+        book.author = row[2];
+        book.isbn = row[3];
+        book.yearPublished = std::stoi(row[4]);
+        book.copiesAvailable = std::stoi(row[5]);
+    }
+
+    mysql_free_result(res);
+    return book;
+}
+
+std::vector<Book> DBClient::queryAllBooks() {
+    std::vector<Book> books;
+    std::string query = "SELECT * FROM books";
+
+    if (mysql_query(conn, query.c_str())) {
+        std::cerr << "查询所有书籍失败: " << mysql_error(conn) << std::endl;
+        return books;
+    }
+
+    MYSQL_RES *res = mysql_store_result(conn);
+    MYSQL_ROW row;
+
+    while ((row = mysql_fetch_row(res))) {
+        Book book;
+        book.id = std::stoi(row[0]);
+        book.title = row[1];
+        book.author = row[2];
+        book.isbn = row[3];
+        book.yearPublished = std::stoi(row[4]);
+        book.copiesAvailable = std::stoi(row[5]);
+        books.push_back(book);
+    }
+
+    mysql_free_result(res);
+    return books;
+}
+
+DBClient::~DBClient() {
+    mysql_close(conn);
 }

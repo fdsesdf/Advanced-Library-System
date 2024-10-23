@@ -159,10 +159,4 @@ CMakeFiles/Advanced-Library-System.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/bits/node_handle.h \
  /usr/include/c++/13/bits/erase_if.h \
- /home/lx/桌面/Advanced-Library-System/include/user.h \
- /home/lx/桌面/Advanced-Library-System/include/DBClient.h \
- /home/lx/桌面/Advanced-Library-System/include/Book.h \
- /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
- /usr/include/c++/13/bits/stl_vector.h \
- /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc
+ /home/lx/桌面/Advanced-Library-System/include/user.h

@@ -81,12 +81,12 @@ clean: CMakeFiles/Advanced-Library-System.dir/clean
 CMakeFiles/Advanced-Library-System.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lx/桌面/Advanced-Library-System/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target Advanced-Library-System"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/lx/桌面/Advanced-Library-System/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target Advanced-Library-System"
 .PHONY : CMakeFiles/Advanced-Library-System.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Advanced-Library-System.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lx/桌面/Advanced-Library-System/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lx/桌面/Advanced-Library-System/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Advanced-Library-System.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lx/桌面/Advanced-Library-System/build/CMakeFiles 0
 .PHONY : CMakeFiles/Advanced-Library-System.dir/rule

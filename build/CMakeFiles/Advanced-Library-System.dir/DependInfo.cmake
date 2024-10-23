@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/lx/桌面/Advanced-Library-System/src/Book.cpp" "CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o.d"
   "/home/lx/桌面/Advanced-Library-System/src/DBClient.cpp" "CMakeFiles/Advanced-Library-System.dir/src/DBClient.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/DBClient.cpp.o.d"
+  "/home/lx/桌面/Advanced-Library-System/src/User.cpp" "CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o.d"
   "/home/lx/桌面/Advanced-Library-System/src/book_management.cpp" "CMakeFiles/Advanced-Library-System.dir/src/book_management.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/book_management.cpp.o.d"
   "/home/lx/桌面/Advanced-Library-System/src/database.cpp" "CMakeFiles/Advanced-Library-System.dir/src/database.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/database.cpp.o.d"
   "/home/lx/桌面/Advanced-Library-System/src/logger.cpp" "CMakeFiles/Advanced-Library-System.dir/src/logger.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/logger.cpp.o.d"
