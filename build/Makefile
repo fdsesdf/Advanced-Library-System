@@ -177,6 +177,54 @@ src/DBClient.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/DBClient.cpp.s
 .PHONY : src/DBClient.cpp.s
 
+src/RedisCache.o: src/RedisCache.cpp.o
+.PHONY : src/RedisCache.o
+
+# target to build an object file
+src/RedisCache.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.o
+.PHONY : src/RedisCache.cpp.o
+
+src/RedisCache.i: src/RedisCache.cpp.i
+.PHONY : src/RedisCache.i
+
+# target to preprocess a source file
+src/RedisCache.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.i
+.PHONY : src/RedisCache.cpp.i
+
+src/RedisCache.s: src/RedisCache.cpp.s
+.PHONY : src/RedisCache.s
+
+# target to generate assembly for a file
+src/RedisCache.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.s
+.PHONY : src/RedisCache.cpp.s
+
+src/RedisClient.o: src/RedisClient.cpp.o
+.PHONY : src/RedisClient.o
+
+# target to build an object file
+src/RedisClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.o
+.PHONY : src/RedisClient.cpp.o
+
+src/RedisClient.i: src/RedisClient.cpp.i
+.PHONY : src/RedisClient.i
+
+# target to preprocess a source file
+src/RedisClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.i
+.PHONY : src/RedisClient.cpp.i
+
+src/RedisClient.s: src/RedisClient.cpp.s
+.PHONY : src/RedisClient.s
+
+# target to generate assembly for a file
+src/RedisClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.s
+.PHONY : src/RedisClient.cpp.s
+
 src/User.o: src/User.cpp.o
 .PHONY : src/User.o
 
@@ -224,6 +272,30 @@ src/book_management.s: src/book_management.cpp.s
 src/book_management.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/book_management.cpp.s
 .PHONY : src/book_management.cpp.s
+
+src/borrow_manager.o: src/borrow_manager.cpp.o
+.PHONY : src/borrow_manager.o
+
+# target to build an object file
+src/borrow_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.o
+.PHONY : src/borrow_manager.cpp.o
+
+src/borrow_manager.i: src/borrow_manager.cpp.i
+.PHONY : src/borrow_manager.i
+
+# target to preprocess a source file
+src/borrow_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.i
+.PHONY : src/borrow_manager.cpp.i
+
+src/borrow_manager.s: src/borrow_manager.cpp.s
+.PHONY : src/borrow_manager.s
+
+# target to generate assembly for a file
+src/borrow_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Advanced-Library-System.dir/build.make CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.s
+.PHONY : src/borrow_manager.cpp.s
 
 src/database.o: src/database.cpp.o
 .PHONY : src/database.o
@@ -360,12 +432,21 @@ help:
 	@echo "... src/DBClient.o"
 	@echo "... src/DBClient.i"
 	@echo "... src/DBClient.s"
+	@echo "... src/RedisCache.o"
+	@echo "... src/RedisCache.i"
+	@echo "... src/RedisCache.s"
+	@echo "... src/RedisClient.o"
+	@echo "... src/RedisClient.i"
+	@echo "... src/RedisClient.s"
 	@echo "... src/User.o"
 	@echo "... src/User.i"
 	@echo "... src/User.s"
 	@echo "... src/book_management.o"
 	@echo "... src/book_management.i"
 	@echo "... src/book_management.s"
+	@echo "... src/borrow_manager.o"
+	@echo "... src/borrow_manager.i"
+	@echo "... src/borrow_manager.s"
 	@echo "... src/database.o"
 	@echo "... src/database.i"
 	@echo "... src/database.s"

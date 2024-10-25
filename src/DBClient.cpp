@@ -10,7 +10,7 @@ DBClient::DBClient() {
         throw std::runtime_error("MySQL 初始化失败");
     }
 
-    conn = mysql_real_connect(conn, "localhost", "root", "StrongP@ssw0rd!", "library", 3306, nullptr, 0);
+    conn = mysql_real_connect(conn, "localhost", "root", "MyNewP@ssw0rd!", "library", 3306, nullptr, 0);
     if (conn == nullptr) {
         throw std::runtime_error("MySQL 连接失败");
     }

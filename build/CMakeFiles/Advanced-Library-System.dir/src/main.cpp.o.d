@@ -150,13 +150,21 @@ CMakeFiles/Advanced-Library-System.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/lx/桌面/Advanced-Library-System/include/usercontroller.h \
- /usr/include/c++/13/unordered_map \
- /usr/include/c++/13/bits/unordered_map.h \
- /usr/include/c++/13/bits/hashtable.h \
- /usr/include/c++/13/bits/hashtable_policy.h \
- /usr/include/c++/13/ext/aligned_buffer.h \
- /usr/include/c++/13/bits/enable_special_members.h \
- /usr/include/c++/13/bits/node_handle.h \
- /usr/include/c++/13/bits/erase_if.h \
- /home/lx/桌面/Advanced-Library-System/include/user.h
+ /home/lx/桌面/Advanced-Library-System/include/book_management.h \
+ /home/lx/桌面/Advanced-Library-System/include/borrow_manager.h \
+ /usr/include/mysql/mysql.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+ /usr/include/mysql/field_types.h /usr/include/mysql/my_list.h \
+ /usr/include/mysql/mysql_com.h /usr/include/mysql/my_command.h \
+ /usr/include/mysql/my_compress.h \
+ /usr/include/mysql/udf_registration_types.h \
+ /usr/include/mysql/client_plugin.h /usr/include/c++/13/stdlib.h \
+ /usr/include/mysql/plugin_auth_common.h \
+ /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
+ /usr/include/mysql/errmsg.h \
+ /home/lx/桌面/Advanced-Library-System/include/database.h \
+ /home/lx/桌面/Advanced-Library-System/include/Book.h \
+ /home/lx/桌面/Advanced-Library-System/include/database.h

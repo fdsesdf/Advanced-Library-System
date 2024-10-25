@@ -10,8 +10,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lx/桌面/Advanced-Library-System/src/Book.cpp" "CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o.d"
   "/home/lx/桌面/Advanced-Library-System/src/DBClient.cpp" "CMakeFiles/Advanced-Library-System.dir/src/DBClient.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/DBClient.cpp.o.d"
+  "/home/lx/桌面/Advanced-Library-System/src/RedisCache.cpp" "CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.o.d"
+  "/home/lx/桌面/Advanced-Library-System/src/RedisClient.cpp" "CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.o.d"
   "/home/lx/桌面/Advanced-Library-System/src/User.cpp" "CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o.d"
   "/home/lx/桌面/Advanced-Library-System/src/book_management.cpp" "CMakeFiles/Advanced-Library-System.dir/src/book_management.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/book_management.cpp.o.d"
+  "/home/lx/桌面/Advanced-Library-System/src/borrow_manager.cpp" "CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.o.d"
   "/home/lx/桌面/Advanced-Library-System/src/database.cpp" "CMakeFiles/Advanced-Library-System.dir/src/database.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/database.cpp.o.d"
   "/home/lx/桌面/Advanced-Library-System/src/logger.cpp" "CMakeFiles/Advanced-Library-System.dir/src/logger.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/logger.cpp.o.d"
   "/home/lx/桌面/Advanced-Library-System/src/main.cpp" "CMakeFiles/Advanced-Library-System.dir/src/main.cpp.o" "gcc" "CMakeFiles/Advanced-Library-System.dir/src/main.cpp.o.d"

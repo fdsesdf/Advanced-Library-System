@@ -1,48 +1,68 @@
 #include <iostream>
-#include "usercontroller.h"
-
+#include "book_management.h"
+#include "borrow_manager.h"
+#include "database.h" // 确保引用数据库类的头文件
 int main() {
-    UserController userController;
-    std::string username, password;
-
+    Database db("localhost", "root", "MyNewP@ssw0rd!", "library"); // 创建数据库对象
+    BorrowManager borrowManager(&db); // 创建借阅管理对象
+    BookManager bookManager;
     int choice;
-    std::cout << "欢迎使用图书管理系统" << std::endl;
-    std::cout << "请选择操作: 1. 注册  2. 登录" << std::endl;
-    std::cin >> choice;
 
-    if (choice == 1) {
-    std::cout << "请输入用户名进行注册: ";
-    std::cin >> username;
-    std::cout << "请输入密码进行注册: ";
-    std::cin >> password;
+    do {
+        // 显示菜单选项
+        std::cout << "Welcome to the Advanced Library System" << std::endl;
+        std::cout << "Please choose an option:" << std::endl;
+        std::cout << "1. Add Book" << std::endl;
+        std::cout << "2. Delete Book" << std::endl;
+        std::cout << "3. Update Book" << std::endl;
+        std::cout << "4. Query Book" << std::endl;
+        std::cout << "5. Borrow Book" << std::endl;
+        std::cout << "6. Return Book" << std::endl;
+        std::cout << "7. Exit" << std::endl;
+        std::cout << "Enter your choice: ";
+        std::cin >> choice;
 
-    try {
-        if (userController.registerUser(username, password, "user")) {
-            std::cout << "注册成功！" << std::endl;
-        } else {
-            std::cout << "注册失败。" << std::endl;
+        switch (choice) {
+            case 1:
+                bookManager.addBook();
+                break;
+            case 2:
+                bookManager.deleteBook();
+                break;
+            case 3:
+                bookManager.updateBook();
+                break;
+            case 4:
+                bookManager.queryBook();
+                break;
+            case 5: {
+                int userId, bookId;
+                std::cout << "Enter User ID: ";
+                std::cin >> userId;
+                std::cout << "Enter Book ID: ";
+                std::cin >> bookId;
+                borrowManager.borrowBook(userId, bookId);
+                break;
+            }
+            case 6: {
+                int userId, bookId;
+                std::cout << "Enter User ID: ";
+                std::cin >> userId;
+                std::cout << "Enter Book ID: ";
+                std::cin >> bookId;
+                borrowManager.returnBook(userId, bookId);
+                break;
+            }
+            case 7:
+                std::cout << "Exiting the program. Goodbye!" << std::endl;
+                break;
+            default:
+                std::cout << "Invalid choice. Please try again." << std::endl;
+                break;
         }
-    } catch (const std::exception& ex) {
-        std::cerr << "注册时出错: " << ex.what() << std::endl;
-    }
-} else if (choice == 2) {
-    std::cout << "请输入用户名登录: ";
-    std::cin >> username;
-    std::cout << "请输入密码登录: ";
-    std::cin >> password;
-
-    try {
-        if (userController.loginUser(username, password)) {
-            std::cout << "登录成功！" << std::endl;
-        } else {
-            std::cout << "登录失败，用户名或密码错误。" << std::endl;
-        }
-    } catch (const std::exception& ex) {
-        std::cerr << "登录时出错: " << ex.what() << std::endl;
-    }
-}else {
-        std::cerr << "无效的选择" << std::endl;
-    }
+        
+        std::cout << std::endl; // 添加一个换行以提升可读性
+    } while (choice != 7);
 
     return 0;
 }

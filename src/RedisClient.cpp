@@ -15,11 +15,33 @@ RedisClient::RedisClient() {
         throw std::runtime_error("Redis 连接失败");
     }
 }
-
+RedisClient::RedisClient(const std::string& host, int port) {
+    try {
+        // 构建 Redis 连接 URI
+        std::string redisUri = "tcp://" + host + ":" + std::to_string(port);
+        
+        // 初始化 Redis 客户端
+        redis = std::make_shared<sw::redis::Redis>(redisUri);
+        
+        std::cout << "Connected to Redis at " << host << ":" << port << std::endl;
+    } catch (const sw::redis::Error &err) {
+        std::cerr << "Failed to connect to Redis: " << err.what() << std::endl;
+        throw;  // 连接失败时抛出异常
+    }
+}
 RedisClient::~RedisClient() {
     redisFree(context);
 }
+void RedisClient::set(const std::string& key, const std::string& value) {
+    redisCommand(context, "SET %s %s", key.c_str(), value.c_str());
+}
 
+std::string RedisClient::get(const std::string& key) {
+    redisReply* reply = static_cast<redisReply*>(redisCommand(context, "GET %s", key.c_str()));
+    std::string result = reply ? reply->str : "nil";
+    freeReplyObject(reply);
+    return result;
+}
 std::optional<Book> RedisClient::getBookFromCache(const std::string& title) {
     redisReply* reply = (redisReply*)redisCommand(context, "GET %s", title.c_str());
     if (reply->type == REDIS_REPLY_STRING) {
@@ -56,4 +78,11 @@ Book RedisClient::deserializeBook(const std::string& data) {
     std::getline(iss, copiesAvailable, ',');
 
     return Book(std::stoi(id), title, author, isbn, std::stoi(yearPublished), std::stoi(copiesAvailable));
+}
+
+bool RedisClient::exists(const std::string& key) {
+    redisReply* reply = static_cast<redisReply*>(redisCommand(context, "EXISTS %s", key.c_str()));
+    bool result = reply->integer == 1;  // 如果结果为 1，表示键存在
+    freeReplyObject(reply);
+    return result;
 }

@@ -4,7 +4,9 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/include/jsoncpp"
+                "/usr/include/jsoncpp",
+                "/usr/local/include/sw/redis++",
+                "/usr/include/hiredis"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang-18",

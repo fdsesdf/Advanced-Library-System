@@ -195,6 +195,48 @@ CMakeFiles/Advanced-Library-System.dir/src/User.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Advanced-Library-System.dir/src/User.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lx/桌面/Advanced-Library-System/src/User.cpp -o CMakeFiles/Advanced-Library-System.dir/src/User.cpp.s
 
+CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.o: CMakeFiles/Advanced-Library-System.dir/flags.make
+CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.o: /home/lx/桌面/Advanced-Library-System/src/RedisCache.cpp
+CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.o: CMakeFiles/Advanced-Library-System.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lx/桌面/Advanced-Library-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.o -MF CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.o.d -o CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.o -c /home/lx/桌面/Advanced-Library-System/src/RedisCache.cpp
+
+CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lx/桌面/Advanced-Library-System/src/RedisCache.cpp > CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.i
+
+CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lx/桌面/Advanced-Library-System/src/RedisCache.cpp -o CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.s
+
+CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.o: CMakeFiles/Advanced-Library-System.dir/flags.make
+CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.o: /home/lx/桌面/Advanced-Library-System/src/RedisClient.cpp
+CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.o: CMakeFiles/Advanced-Library-System.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lx/桌面/Advanced-Library-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.o -MF CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.o.d -o CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.o -c /home/lx/桌面/Advanced-Library-System/src/RedisClient.cpp
+
+CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lx/桌面/Advanced-Library-System/src/RedisClient.cpp > CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.i
+
+CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lx/桌面/Advanced-Library-System/src/RedisClient.cpp -o CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.s
+
+CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.o: CMakeFiles/Advanced-Library-System.dir/flags.make
+CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.o: /home/lx/桌面/Advanced-Library-System/src/borrow_manager.cpp
+CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.o: CMakeFiles/Advanced-Library-System.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lx/桌面/Advanced-Library-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.o -MF CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.o.d -o CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.o -c /home/lx/桌面/Advanced-Library-System/src/borrow_manager.cpp
+
+CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lx/桌面/Advanced-Library-System/src/borrow_manager.cpp > CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.i
+
+CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lx/桌面/Advanced-Library-System/src/borrow_manager.cpp -o CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.s
+
 # Object files for target Advanced-Library-System
 Advanced__Library__System_OBJECTS = \
 "CMakeFiles/Advanced-Library-System.dir/src/main.cpp.o" \
@@ -205,7 +247,10 @@ Advanced__Library__System_OBJECTS = \
 "CMakeFiles/Advanced-Library-System.dir/src/DBClient.cpp.o" \
 "CMakeFiles/Advanced-Library-System.dir/src/usercontroller.cpp.o" \
 "CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o" \
-"CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o"
+"CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o" \
+"CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.o" \
+"CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.o" \
+"CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.o"
 
 # External object files for target Advanced-Library-System
 Advanced__Library__System_EXTERNAL_OBJECTS =
@@ -219,14 +264,19 @@ Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/src/DBClient.cpp
 Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/src/usercontroller.cpp.o
 Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/src/Book.cpp.o
 Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/src/User.cpp.o
+Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/src/RedisCache.cpp.o
+Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/src/RedisClient.cpp.o
+Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/src/borrow_manager.cpp.o
 Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/build.make
 Advanced-Library-System: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 Advanced-Library-System: /usr/lib/x86_64-linux-gnu/libssl.so
 Advanced-Library-System: /usr/lib/x86_64-linux-gnu/libcrypto.so
+Advanced-Library-System: /usr/lib/x86_64-linux-gnu/libhiredis.so
+Advanced-Library-System: /usr/local/lib/libredis++.so
 Advanced-Library-System: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 Advanced-Library-System: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 Advanced-Library-System: CMakeFiles/Advanced-Library-System.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lx/桌面/Advanced-Library-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Advanced-Library-System"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lx/桌面/Advanced-Library-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable Advanced-Library-System"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Advanced-Library-System.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
